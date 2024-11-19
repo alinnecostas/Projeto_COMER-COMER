@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE OBG - Estrutura HTML basica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Bad+Script&family=Big+Shoulders+Stencil+Display:wght@100..900&family=Italiana&family=Kalnia+Glaze:wght@100..700&family=Zen+Loop:ital@0;1&display=swap');
+
+        @font-face {
+            font-family: 'MinhaFonte';
+            src: url(Fotos/cherry/Cherry\ Monospace-Light.ttf) format('truetype');
+        }
+
+
+        .italiana-regular {
+            font-family: "Italiana", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .zen-loop-regular {
+            font-family: "Zen Loop", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            position: relative;
+        }
+
+        header {
+            background-image: url(Fotos/fundoHeader.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header>h1 {
+            color: rgb(255, 248, 248);
+            text-shadow: 1px 1px 0px rgb(122, 49, 7);
+            font-size: 9em;
+            font-family: 'MinhaFonte', sans-serif;
+        }
+
+
+
+        #sobre {
+            display: flex;
+            background-color: white;
+            flex-direction: column;
+            text-align: center;
+            padding: 6cqh 70px 90px 70px;
+            margin: 0px;
+        }
+
+        #sobre div>h1 {
+            font-size: 3.5em;
+            color: #d40303;
+            font-family: Zen Loop;
+        }
+
+        #sobre div>p {
+            font-size: 1.5em;
+            text-align: justify;
+            color: black;
+        }
+
+
+        main {
+
+            background-image: url(Fotos/Comida.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            justify-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            height: 50%;
+            padding: 0 5%;
+            gap: 50px;
+        }
+
+        #Atividades {
+            background-color: #d403032d;
+            color: white;
+            padding: 4%;
+            margin: 2%;
+            border-radius: 10px;
+            flex: 2;
+        }
+
+        #Atividades>div>h1 {
+            font-size: 3.4em;
+            font-family: Italiana;
+
+        }
+
+        #Atividades>div>h2 {
+            font-size: 2em;
+            font-family: Italiana;
+
+        }
+
+        #Atividades>div>p {
+            font-size: 1.4em;
+
+        }
+
+
+        #Principais {
+            background-color: #d403032d;
+            color: white;
+            padding: 2%;
+            margin: 2%;
+            border-radius: 10px;
+            flex: 2;
+
+        }
+
+        #Principais>div>h1 {
+            font-size: 3.4em;
+            color: white;
+            font-family: Italiana;
+        }
+
+        #Principais>div>ul>li>a:hover {
+            color: rgb(255, 196, 0);
+        }
+
+        
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.4em;
+        }
+
+        #Petfriendly {
+            background-color: #d403032d;
+            border-radius: 10px;
+            padding: 2%;
+            margin: 2%;
+            flex: 1;
+        }
+
+        #Petfriendly>div>h1 {
+            font-size: 3.7em;
+            color: rgb(241, 207, 183);
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        #Petfriendly>div>p {
+            font-size: 1.4em;
+            color: white;
+
+        }
+
+        #Petfriendly>div>img {
+            max-width: 400px;
+        }
+
+
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            max-height: 100%;
+            padding: 20px;
+        }
+
+        #galerias>.gallery-container>h1 {
+            font-size: 3.2em;
+            margin: 0 0 10px 0;
+            color: #d61818;
+            text-align: center;
+            justify-items: center;
+            padding: 40px 10px;
+            font-family: Zen Loop;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .gallery>div {
+            margin: 15px;
+            border: 1px solid rgb(0, 0, 0);
+            width: 350px;
+            background-color: rgb(255, 255, 255);
+            transition: border 0.3s;
+            text-align: center;
+
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .desc {
+            padding: 15px;
+            text-align: center;
+            color: rgb(234, 150, 6);
+            font-family: Italiana;
+        }
+
+        #redes {
+            display: flexbox;
+            background-color: #3A6765;
+            color: white;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5px 40px 5px 40px;
+            font-family: Zen Loop;
+            font-size: 1.5em;
+        }
+
+        #redes>a {
+            text-decoration: none;
+            padding: 5px;
+        }
+
+
+        footer {
+            background-color: #0e200d;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            justify-content: center;
+        }
+
+
+        @media (min-width: 1024px) {
+
+            .menu {
+                position: relative;
+
+            }
+
+            .nav-links {
+                position: absolute;
+                flex-direction: column;
+                background: linear-gradient(to left, #7eae99, #243407 60%);
+                top: 100%;
+                left: 0;
+                width: 100%;
+                box-shadow: 0px 2px 0px 0px;
+            }
+
+
+            .nav-links a {
+                padding: 12px 16px;
+                color: #fecc9a;
+                text-decoration: none;
+                text-align: center;
+                transition: 2s;
+                font-size: 1.5em;
+                font-family: Italiana;
+            }
+
+            .nav-links a:hover {
+                color: #d40303;
+                text-decoration: underline;
+            }
+
+            .hamburguer,
+            .hamburguer-label {
+                display: none;
+            }
+
+
+            #sobre,
+            .gallery-container {
+                background-color: rgb(255, 255, 255);
+                padding: 4rem;
+            }
+
+        }
+
+        @media (max-width: 1024px) {
+
+            
+
+            .nav-links {
+                position: absolute;
+                flex-direction: column;
+                background: linear-gradient(to left, #7eae99, #243407 60%);
+                top: 100%;
+                left: 0;
+                width: 100%;
+                box-shadow: 0px 2px 0px 0px;
+            }
+
+
+            .nav-links a {
+                padding: 12px 16px;
+                color: #fecc9a;
+                text-decoration: none;
+                text-align: center;
+                transition: 2s;
+                font-size: 1.5em;
+                font-family: Italiana;
+            }
+
+            .nav-links a:hover {
+                color: #d40303;
+                text-decoration: underline;
+            }
+
+            .hamburguer,
+            .hamburguer-label {
+                display: none;
+            }
+
+            #sobre,
+            .gallery-container {
+                background-color: rgb(78, 94, 76);
+                padding: 3rem;
+            }
+
+            #sobre div>h1 {
+                color: white;
+            }
+
+            #sobre div>p {
+                color: rgb(209, 221, 213);
+            }
+
+            #galerias>.gallery-container>h1 {
+                color: white;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+
+            .hamburguer {
+                display: none;
+            }
+
+            .hamburguer-label {
+                display: block;
+                cursor: pointer;
+                font-size: 24px;
+                color: rgb(212, 106, 13);
+                padding: 16px;
+
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                background: linear-gradient(to left, #7eae99, #243407 60%);
+                top: 100%;
+                left: 0;
+                width: 100%;
+                box-shadow: 0px 2px 0px 0px;
+            }
+
+            .nav-links a {
+                padding: 12px 16px;
+                text-decoration: none;
+                color: rgb(230, 221, 239);
+                text-align: center;
+            }
+
+            .nav-links a:hover {
+                background-color: rgb(12, 17, 16);
+            }
+
+            .hamburguer:checked+.hamburguer-label+.nav-links {
+                display: flex;
+            }
+
+            #sobre,
+            .gallery-container {
+                background-color: rgb(202, 95, 52);
+                padding: 1rem;
+            }
+
+            #sobre div>h1 {
+                color: white;
+            }
+
+            #sobre div>p {
+                color: rgb(240, 233, 225);
+            }
+
+            #galerias>.gallery-container>h1 {
+                color: white;
+            }
+        }
+
+     
+
+    </style>
+</head>
+
+<body>
+
+    <div class="menu">
+        <input type="checkbox" id="hamburguer" class="hamburguer">
+        <label for="hamburguer" class="hamburguer-label">☰</label>
+
+            <div class="nav-links">
+                <a href="SITE.html">Home</a>
+                <a href="SITE.html">Sobre</a>
+                <a href="SITE.html">Contato</a>
+            </div>
+       
+            <header>
+                <h1>COMER-COMER</h1>
+            </header>
+        
+    </div>
+
+
+
+    <section id="sobre">
+        <div>
+            <h1>Sobre nós:</h1>
+            <p>Comer-Comer é um restaurante gastronômico que nasceu em 2024 com o objetivo de oferecer
+                uma variedade de pratos típicos da região. Hoje, somos um dos melhores lugares para se
+                reunir com amigos, familiares e amigos para uma boa comida. Nós preparamos pratos de
+                alta qualidade, com ingredientes naturais e saborosos para todos os nossos clientes.</p>
+    </section>
+
+
+    <main>
+        <section id="Atividades">
+            <div>
+                <h1>Atividades</h1>
+                <h2>Noites de Jazz</h2>
+                <p>Desfrute de uma noite relaxante com música ao vivo de talentosos músicos de jazz. Nossas noites
+                    de
+                    jazz são perfeitas para quem aprecia boa música e uma atmosfera acolhedora. Venha com amigos ou
+                    familiares e aproveite uma experiência única.</p>
+            </div>
+            <div>
+                <h2>Degustações de Vinhos</h2>
+                <p>Participe de nossas exclusivas degustações de vinhos, onde você poderá experimentar uma seleção
+                    de
+                    vinhos finos, acompanhados por explicações de sommeliers experientes. Aprenda sobre diferentes
+                    tipos
+                    de uvas e sabores.</p>
+            </div>
+            <div>
+                <h2>Workshops de Culinária</h2>
+                <p>Aprenda a cozinhar pratos deliciosos com nossos chefs renomados. Nossos workshops de culinária
+                    são
+                    uma ótima oportunidade para aprimorar suas habilidades na cozinha, conhecer novas receitas e
+                    técnicas, e se divertir enquanto cozinha.</p>
+            </div>
+            </div>
+        </section>
+
+        <section id="Principais">
+            <div>
+                <h1>Conheça nossos principais pratos</h1>
+                <ul type=none>
+                    <li><a href="#Macarrao">
+                            <p><strong> 🍲 Feijoada:</strong> Um clássico brasileiro feito com feijão preto e várias
+                                partes do porco, servido com arroz, couve refogada, farofa e laranja.</p>
+                        </a></li>
+                    <li><a href="#Risoto">
+                            <p><strong> 🍽️ Moqueca: </strong>Um ensopado de peixe ou frutos do mar, com leite de coco e
+                                azeite de dendê, típico da Bahia.</p>
+                        </a></li>
+                    <li><a href="#Churrasco">
+                            <p><strong> 🌮 Acarajé:</strong> Bolinho de feijão fradinho frito no azeite de dendê,
+                                recheado com camarão, vatapá e caruru, muito popular na Bahia.</p>
+                        </a></li>
+                    <li><a href="#Escondidinhos">
+                            <p><strong> 🍚 Arroz Carreteiro:</strong> Prato do sul do Brasil, feito com arroz e carne
+                                seca, refogados com alho, cebola e pimentão.</p>
+                        </a></li>
+                    <li><a href="#Escondidinhos">
+                            <p><strong> 🍗 Coxinha: </strong>Salgado recheado com frango desfiado, moldado em formato de
+                                coxa de frango, empanado e frito.</p>
+                        </a></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section id="Petfriendly">
+
+            <div>
+                <h1>Espaço PetFriedly 🐾</h1>
+                <img src="Fotos/friendly.jpg" alt="FotoPet">
+                <p>Espaco Petfriendly é um espaço onde você pode ficar com os Pet enquanto desfruta em nosso espaço.</p>
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <section id="galerias">
+        <div class="gallery-container">
+            <h1>Repetidinhos pra Comer-Comer!</h1>
+            <div class="gallery">
+                <div>
+                    <a target="_blank" href="Fotos/burguer.jpg">
+                        <img src="Fotos/burguer.jpg" alt="abacaxi">
+                    </a>
+                    <div class="desc">Burguer Comic</div>
+                </div>
+                <div>
+                    <a target="_blank" href="Fotos/prato.jpg">
+                        <img src="Fotos/prato.jpg" alt="banana">
+                    </a>
+                    <div class="desc">Ravioli</div>
+                </div>
+                <div>
+                    <a target="_blank" href="Fotos/prato i.jpg">
+                        <img src="Fotos/prato i.jpg" alt="morango">
+                    </a>
+                    <div class="desc">Torteti de fruta</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="redes">
+
+        <h1>Siga-nos nas redes sociais!</h1>
+        <a href="#"><img src="Fotos/icon facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="Fotos/icon instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="Fotos/icon X.png" alt="X"></a>
+
+    </section>
+
+
+    <footer>
+        Produzido por Alinne Costa &copy;
+    </footer>
+</body>
+
+</html>
